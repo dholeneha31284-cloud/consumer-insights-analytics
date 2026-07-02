@@ -1,0 +1,284 @@
+1. Sprint Objective
+
+The objective of this sprint is to apply inferential statistical techniques to determine whether observed patterns in customer survey data are statistically significant. Unlike descriptive statistics, inferential statistics allow analysts to draw conclusions about an entire customer population based on sample data.
+
+At the end of this sprint, we will be able to:
+
+Understand hypothesis testing
+Perform Independent t-Test
+Perform Chi-Square Test
+Perform ANOVA
+Analyze relationships using Correlation
+Calculate Confidence Intervals
+Convert statistical findings into business insights
+2. What is Inferential Statistics?
+
+Inferential Statistics is a branch of statistics that uses sample data to make conclusions or predictions about an entire population.
+
+Instead of simply describing data, inferential statistics helps answer business questions such as:
+
+Does customer satisfaction differ between males and females?
+Do customers from different regions have different satisfaction levels?
+Is purchase intent related to gender?
+Which product attribute has the strongest relationship with customer satisfaction?
+
+These methods help organizations make evidence-based business decisions.
+
+3. Descriptive vs Inferential Statistics
+Descriptive Statistics	Inferential Statistics
+Describes existing data	Draws conclusions about a population
+Uses charts and summary statistics	Uses probability and statistical tests
+No prediction	Makes statistical decisions
+Example: Average customer satisfaction	Example: Is the average significantly different between groups?
+4. Population and Sample
+Population
+
+The complete set of customers under study.
+
+Example:
+
+All customers of a retail brand.
+
+Sample
+
+A subset of customers selected from the population.
+
+Example:
+
+1,000 survey responses collected from customers.
+
+Business organizations usually analyze a sample because collecting data from every customer is expensive and time-consuming.
+
+5. Hypothesis Testing
+
+Hypothesis testing is a statistical method used to determine whether an observed difference or relationship is statistically significant or has occurred by random chance.
+
+It is widely used in marketing analytics, customer experience analysis, healthcare, finance, and business intelligence.
+
+Null Hypothesis (H₀)
+
+The Null Hypothesis assumes that there is no significant difference or no relationship between variables.
+
+Example:
+
+Customer satisfaction is the same for male and female customers.
+
+Alternative Hypothesis (H₁)
+
+The Alternative Hypothesis assumes that a significant difference or relationship exists.
+
+Example:
+
+Customer satisfaction differs between male and female customers.
+
+Significance Level (α)
+
+The significance level represents the acceptable probability of making a wrong decision.
+
+Most business analyses use:
+
+α = 0.05
+
+This means we accept a 5% chance of incorrectly rejecting the Null Hypothesis.
+
+p-value
+
+The p-value measures the probability that the observed result occurred by chance.
+
+Decision Rule:
+
+If p-value < 0.05, Reject the Null Hypothesis.
+If p-value ≥ 0.05, Fail to Reject the Null Hypothesis.
+Statistical Significance
+
+A result is considered statistically significant when the observed difference is unlikely to have occurred by chance.
+
+Statistical significance provides confidence that the observed business outcome reflects a real pattern rather than random variation.
+
+6. Independent t-Test
+Objective
+
+Compare the means of two independent groups.
+
+Business Problem
+
+Does customer satisfaction differ significantly between male and female customers?
+
+Variables
+
+Independent Variable:
+
+Gender
+
+Dependent Variable:
+
+Customer Satisfaction
+Assumptions
+Two independent groups
+Numerical dependent variable
+Approximately normal distribution
+Independent observations
+Python Function
+ttest_ind()
+Output
+t Statistic
+p-value
+Business Interpretation
+
+If the p-value is less than 0.05, customer satisfaction differs significantly between male and female customers.
+
+Otherwise, gender does not significantly affect customer satisfaction.
+
+7. Chi-Square Test
+Objective
+
+Determine whether two categorical variables are associated.
+
+Business Problem
+
+Is Purchase Intent associated with Gender?
+
+Variables
+
+Variable 1
+
+Gender
+
+Variable 2
+
+Purchase Intent
+Assumptions
+Categorical variables
+Independent observations
+Adequate sample size
+Python Function
+chi2_contingency()
+Output
+Chi-Square Statistic
+p-value
+Business Interpretation
+
+If the p-value is less than 0.05, purchase intent depends on customer gender.
+
+Otherwise, purchase intent is independent of gender.
+
+8. ANOVA (Analysis of Variance)
+Objective
+
+Compare the mean of three or more groups.
+
+Business Problem
+
+Do customers from different regions have different satisfaction scores?
+
+Variables
+
+Independent Variable
+
+Region
+
+Dependent Variable
+
+Customer Satisfaction
+Why ANOVA?
+
+A t-Test compares only two groups.
+
+When more than two groups exist, ANOVA provides a single statistical test to determine whether at least one group's mean differs significantly.
+
+Python Function
+f_oneway()
+Output
+F Statistic
+p-value
+Business Interpretation
+
+If the p-value is less than 0.05, customer satisfaction differs across regions.
+
+Businesses can then investigate regional factors affecting customer experience.
+
+9. Correlation Analysis
+Objective
+
+Measure the strength and direction of relationships between numerical variables.
+
+Variables Used
+Product Quality
+Service Quality
+Value for Money
+Customer Satisfaction
+Pearson Correlation Coefficient
+
+Range:
+
++1 → Perfect Positive Relationship
+0 → No Relationship
+-1 → Perfect Negative Relationship
+Python Function
+corr()
+
+or
+
+pearsonr()
+Correlation Matrix
+
+A correlation matrix summarizes pairwise relationships among numerical variables.
+
+Heatmaps provide a visual representation of these correlations.
+
+Business Interpretation
+
+A strong positive correlation indicates that improvements in one variable are associated with improvements in another.
+
+For example, if Product Quality has the strongest positive correlation with Customer Satisfaction, improving product quality may increase customer satisfaction.
+
+10. Confidence Intervals
+Objective
+
+Estimate the range within which the true population mean is expected to lie.
+
+Why Confidence Intervals?
+
+A sample mean is only an estimate of the population mean.
+
+Confidence intervals provide a range that is likely to contain the true value.
+
+95% Confidence Interval
+
+A 95% confidence interval means that if the same sampling process were repeated many times, approximately 95% of the calculated intervals would contain the true population mean.
+
+Python Functions
+sem()
+t.interval()
+Business Interpretation
+
+Narrow confidence intervals indicate more precise estimates, while wider intervals suggest greater uncertainty.
+
+11. Business Insights
+
+Based on inferential statistical analysis, organizations can:
+
+Identify significant differences in customer satisfaction.
+Determine whether demographic characteristics influence purchasing behavior.
+Compare customer satisfaction across geographical regions.
+Understand which product attributes drive customer satisfaction.
+Estimate customer metrics with measurable confidence.
+
+These insights support evidence-based decision-making in marketing, customer experience, and product strategy.
+
+12. Sprint Summary
+
+During Sprint 5, the following inferential statistical techniques were studied and implemented:
+
+Hypothesis Testing
+Null and Alternative Hypothesis
+Statistical Significance
+p-value
+Independent t-Test
+Chi-Square Test
+ANOVA
+Pearson Correlation Analysis
+Confidence Intervals
+Business Interpretation of Statistical Results
+
+By completing this sprint, the project moves beyond descriptive analytics and begins applying statistical inference to support business decisions. These techniques enable analysts to validate assumptions, identify meaningful patterns, and provide recommendations backed by statistical evidence.
